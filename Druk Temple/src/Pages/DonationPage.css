@@ -1,0 +1,137 @@
+.donation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Poppins';
+}
+
+.donation-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.donation-card {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 500px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: #000;
+}
+
+.donation-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 10px rgba(7, 5, 5, 0.2);
+  background-color: #08385e;
+  color: #fff;
+}
+
+.donation-card h2 {
+  margin-bottom: 10px;
+}
+
+.donation-card p {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.donate-button {
+  width: 45%;
+  height: 40px;
+  margin-top: 17px;
+  margin-right: 3px;
+  border-radius: 50px;
+  background-color: #eb7f3b;
+  border: 1px solid #08385e;
+  margin-left: 25%;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.donate-button:hover {
+  background-color: #2230f5;
+}
+
+.popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  position: relative;
+  background-color: #08385e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  height: 400px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.popup-inner img {
+  margin-right: 60px;
+}
+
+.popup-inner p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.popup-inner form {
+  opacity: 90%;
+  width: 500px;
+  padding-top: 30px;
+  margin-left: 0px;
+  padding-bottom: 30px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.popup-inner input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+.popup-inner button[type='submit'] {
+  /* background-color: green; */
+  border: none;
+  /* color: black; */
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup-inner button[type='submit']:hover {
+  background-color: orange;
+}

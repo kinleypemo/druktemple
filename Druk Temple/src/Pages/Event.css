@@ -1,0 +1,173 @@
+/* Container styles */
+.event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Hero banner styles */
+.hero-banner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+}
+
+.animated-text {
+  font-size: 48px;
+  font-weight: bold;
+  animation: bannerAnimation 1s infinite;
+}
+
+@keyframes bannerAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Post container styles */
+.post-container {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.post-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+/* Post card styles */
+.post-card {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #08385e;
+  opacity: 0.9;
+  color: white;
+}
+
+/* Post title styles */
+.post-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Post details styles */
+.post-details {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.post-card:hover .post-details {
+  display: block;
+  opacity: 1;
+}
+
+.post-details p {
+  margin: 5px 0;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Additional Improvements */
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.event-container {
+  max-width: 1200px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .animated-text {
+    font-size: 36px;
+  }
+
+  .post-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 24px;
+  }
+}
